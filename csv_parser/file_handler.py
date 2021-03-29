@@ -56,7 +56,3 @@ for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv']:
         print(f'Other error occurred: {err}')  
     else:
         print('Success!')
-
-      
-
-

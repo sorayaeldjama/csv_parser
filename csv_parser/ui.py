@@ -1,3 +1,6 @@
+"""
+User  Interface module.
+"""
 #ui.py -> user interface
 #gui.py -> graphical user interface
 print("voici notre menu selectionnez l'annalyse que vous souhaiter")
