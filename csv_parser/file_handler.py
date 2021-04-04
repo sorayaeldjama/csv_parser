@@ -38,7 +38,7 @@ def telecharger():
                 print('Success!') """
    
 # recuprer la page avec request.get qui lance une requete (http/https)
-for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv']:
+for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv','https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv',]:
     try:
         # telecharegr le fichier et le stocker dans 
         chaine = url.split("/")
@@ -57,4 +57,6 @@ for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv']:
     else:
         print('Success!')
 
-print("hello")
+fileName = r"C:\Documents\test.txt"
+os.path.isfile(fileName)
+
