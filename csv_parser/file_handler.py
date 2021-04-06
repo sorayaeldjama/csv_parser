@@ -20,8 +20,11 @@ for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv', 'http
         # telecharegr le fichier et le stocker dans 
         chaine = url.split("/")
         name_file = chaine[len(chaine) - 1]        
-        if not os.path.isfile(name_file):
-            print('le dossier existe pas')
+        if os.path.isfile(name_file):
+            print('le fichier existe ')
+            
+        else:
+            print('le fichier n existe pas')
             with open(name_file, 'wb') as file:
                 # get request
                 response = requests.get(url)  # response est un objet qui permet d'inspecter le resultat de la requete 
@@ -29,7 +32,6 @@ for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv', 'http
                 file.write(response.content)
                 # si response est successful, no Exception will be raised 
                 response.raise_for_status() # un HTTPErrorsera déclenché pour certains codes d'état si le code d'etat indique reussit il continu 
-         
            
        
     except HTTPError as http_err:
