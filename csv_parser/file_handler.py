@@ -15,7 +15,8 @@ rep_cour = os.getcwd()
 print(rep_cour)
 
 # recuprer la page avec request.get qui lance une requete (http/https)
-for url in ['https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv', 'https://people.sc.fsu.edu/~jburkardt/data/csv/airtravel.csv','https://people.sc.fsu.edu/~jburkardt/data/csv/biostats.csv']:
+lien = 'https://people.sc.fsu.edu/~jburkardt/data/csv/'
+for url in [lien + 'addresses.csv', lien + 'airtravel.csv',lien + 'biostats.csv', lien + "cities.csv"]:
     try:
         # telecharegr le fichier et le stocker dans 
         chaine = url.split("/")
