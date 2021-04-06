@@ -1,13 +1,12 @@
 """
 Package CSV Parser
 """
-import os # imporetr la biblioteque os pour gerer la pause a la fin de script
-import requests # importer la bibliotheque request pour charger page et la stocker dans une variable
+import os  # imporetr la biblioteque os pour gerer la pause a la fin de script
+import requests  # importer la bibliotheque request pour charger page et la stocker dans une variable
 from requests.exceptions import HTTPError
-import urllib.request
-from os import getcwd, chdir, mkdir
-from os import chdir #importer ce module pour vhanger de repertoire
-rep_cour = os.getcwd()
+from os import getcwd, chdir  # importer ce module pour vhanger de repertoire
+
+rep_cour = getcwd()  # connaitre notre repertoire actuel
 print(rep_cour)
 chdir("csv_uploads")
 rep_cour = os.getcwd()
