@@ -6,8 +6,7 @@ import requests # importer la bibliotheque request pour charger page et la stock
 from requests.exceptions import HTTPError
 import urllib.request
 from os import getcwd, chdir, mkdir
-from os import chdir
-import os
+from os import chdir #importer ce module pour vhanger de repertoire
 rep_cour = os.getcwd()
 print(rep_cour)
 chdir("csv_uploads")
@@ -16,7 +15,7 @@ print(rep_cour)
 
 # recuprer la page avec request.get qui lance une requete (http/https)
 lien = 'https://people.sc.fsu.edu/~jburkardt/data/csv/'
-for url in [lien + 'addresses.csv', lien + 'airtravel.csv',lien + 'biostats.csv', lien + "cities.csv"]:
+for url in [lien + 'addresses.csv', lien + 'airtravel.csv',lien + 'biostats.csv', lien + "cities.csv", ]:
     try:
         # telecharegr le fichier et le stocker dans 
         chaine = url.split("/")
