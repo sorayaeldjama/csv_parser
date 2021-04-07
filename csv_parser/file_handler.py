@@ -14,9 +14,10 @@ print(rep_cour)
 
 # recuprer la page avec request.get qui lance une requete (http/https)
 lien = 'https://people.sc.fsu.edu/~jburkardt/data/csv/'
-for url in [lien + 'addresses.csv', lien + 'airtravel.csv',lien + 'biostats.csv', lien + "cities.csv", ]:
+for url in [lien + 'addresses.csv', lien + 'airtravel.csv',
+            lien + 'biostats.csv', lien + "cities.csv", ]:
     try:
-        # telecharegr le fichier et le stocker dans 
+        # telecharegr le fichier et le stocker dans
         chaine = url.split("/")
         name_file = chaine[len(chaine) - 1]        
         if os.path.isfile(name_file):
