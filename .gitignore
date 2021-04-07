@@ -1,4 +1,5 @@
 test_ignore.txt
 file_handler/csv_uploads/
 *.csv
-.vscode
+/.vscode
+*.json
