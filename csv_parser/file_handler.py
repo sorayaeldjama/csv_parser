@@ -14,9 +14,10 @@ rep_cour = os.getcwd()
 print(rep_cour)
 """
 
-def download_page():
+
+def download_page(url):
+    # Telacharger la page csv
     try:
-        #  get request, response est un objet
         response = requests.get(url)
     except HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')   
