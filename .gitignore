@@ -1,7 +1,8 @@
 test_ignore.txt
+
 file_handler/csv_uploads/
 .vscode/*
-__pycache__/
+__pycache__/*
 *.csv
 
 *.json
