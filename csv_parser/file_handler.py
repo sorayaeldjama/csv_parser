@@ -1,10 +1,11 @@
 """
 Package CSV Parser
 """
+
 import os  
 import requests 
 from requests.exceptions import HTTPError
-from os import getcwd 
+import csv
 
 
 def download_page(url):
@@ -31,7 +32,7 @@ def write_file(name_file, response):
     path = os.getcwd()
     with open(path + '/csv_uploads/' + name_file, 'wb') as file:
         file.write(response.content)
-        
+       
 
 def file_exist(name_file):
     path = os.getcwd()
@@ -42,3 +43,15 @@ def file_exist(name_file):
             print("il n existe pas")                 
     except:
         print("le repertoire n existe pas")
+
+
+""" creer un parser  """
+
+
+def lire_csv(file_csv):
+    with open(os.getcwd() + "\csv_uploads/" + file_csv, "r") as f:
+        print(f.read())
+
+def ecrire_csv():
+
+    
