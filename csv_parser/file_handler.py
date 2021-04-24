@@ -52,6 +52,12 @@ def lire_csv(file_csv):
     with open(os.getcwd() + "\csv_uploads/" + file_csv, "r") as f:
         print(f.read())
 
-def ecrire_csv():
+
+def ecrire_csv(file_csv):
+    with open(os.getcwd() + "\csv_uploads/" + file_csv, "r") as f:
+        file.write()
+
+
+
 
     
